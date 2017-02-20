@@ -1,0 +1,79 @@
+\newcommand*{\ROOT}{./src}
+
+\input{\ROOT/preamble.tex}
+
+% Paths towards images :
+\graphicspath{{\ROOT/}}
+
+
+%opening
+\title{Docuement title}
+\author{Aurélien SCHILTZ}
+
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=8cm]{logo}
+	\par
+	\vspace{4cm}
+
+	{\scshape\Large Rapport de stage\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Analyse d'une application et communication autour de \\ses patrons de conception\par}
+	\vspace{2cm}
+	{\Large Aurélien SCHILTZ\par}
+	\vfill\par
+	\par
+	\vfill
+
+% Bottom of the page
+	{\large 6 janvier 2017}
+\end{titlepage}
+
+
+\newpage
+\begin{abstract}
+
+  Abstract goes here
+
+\end{abstract}
+
+\renewcommand{\abstractname}{Second Abstract}
+
+\vspace{3cm}
+
+\begin{abstract}
+
+Second abstract goes here (abstract in other language, whatever)
+
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+% Declare an introduction that doesn't have a part number in the TOC :
+
+%\newpage
+%\part*{Introduction}
+%\addcontentsline{toc}{part}{Introduction}
+
+
+% Separate parts :
+
+\newpage
+ \input{\ROOT/parts/part1/index}
+
+
+% Appendix (same behaviour as introduction, no part number in TOC)
+
+% \newpage
+% \appendix
+% \part*{Annexes}
+% \addcontentsline{toc}{part}{Annexes}
+
+\end{document}
